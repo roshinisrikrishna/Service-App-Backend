@@ -1,5 +1,5 @@
-// import dotenv from 'dotenv';
-// dotenv.config();
+import dotenv from 'dotenv';
+dotenv.config();
 
 import express from 'express';
 const app = express();
@@ -11,10 +11,10 @@ import session from'express-session';
 import cookieParser from'cookie-parser';
 
 const db = mysql.createPool({
-  host: "tracktriptest.couriertrip.trackman.in",
-  user: "roshini",
-  password: "roshini8398",
-  database: "test_tripdb"
+  host: process.env.HOST,
+  user: process.env.USER,
+  password: process.env.PASSWORD,
+  database: process.env.DATABASE
 });
 
 
